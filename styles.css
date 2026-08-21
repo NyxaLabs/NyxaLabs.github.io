@@ -157,6 +157,7 @@ h1 span{background:linear-gradient(100deg,var(--cyan),#75a6ff 52%,var(--violet))
   background:linear-gradient(120deg,var(--coral),var(--violet));color:white;font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.08em
 }
 .empty-state{text-align:center;color:var(--muted);padding:45px 0}
+.values-section{padding:18px 0 0;scroll-margin-top:88px}
 .values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 0 86px}
 .values article{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:21px}
 .value-icon{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;margin-bottom:13px}
