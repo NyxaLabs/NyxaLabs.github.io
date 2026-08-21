@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#160b08">
 <title>NYXA LinkCheck — Vérifier, comprendre, signaler</title>
 <meta name="description" content="Vérifiez un lien avec VirusTotal, comprenez le résultat et accédez aux services de signalement adaptés.">
+<link rel="canonical" href="https://nyxalabs.github.io/nyxa-linkcheck/">
 <style>
 :root{
   --bg:#140907;--bg2:#24100c;--panel:rgba(44,22,17,.87);--panel2:#1d0f0c;
@@ -414,8 +415,29 @@ document.querySelectorAll(".mobile-section-toggle").forEach(btn=>{
   btn.addEventListener("click",()=>{
     const section = btn.closest(".mobile-collapsible");
     const willOpen = !section.classList.contains("open");
+    if(willOpen){
+      document.querySelectorAll(".mobile-collapsible").forEach(other=>{
+        if(other===section)return;
+        other.classList.remove("open");
+        const otherToggle=other.querySelector(".mobile-section-toggle");
+        if(otherToggle)otherToggle.setAttribute("aria-expanded","false");
+      });
+    }
     section.classList.toggle("open", willOpen);
     btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+  });
+});
+
+document.querySelectorAll(".mobile-quicknav a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    const target=document.querySelector(link.getAttribute("href"));
+    if(!target || !target.classList.contains("mobile-collapsible"))return;
+    document.querySelectorAll(".mobile-collapsible").forEach(other=>{
+      const toggle=other.querySelector(".mobile-section-toggle");
+      const active=other===target;
+      other.classList.toggle("open",active);
+      if(toggle)toggle.setAttribute("aria-expanded",active?"true":"false");
+    });
   });
 });
 

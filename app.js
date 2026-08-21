@@ -9,6 +9,7 @@ const projects = [
     features:["Fuites","Faux conseiller","Parcours guidé"],
     preview:"assets/previews/exposition.svg",
     url:"/exposition-numerique/",
+    published:true,
     recommended:true
   },
   {
@@ -19,7 +20,8 @@ const projects = [
     tags:["Sécurité","Identité numérique","Prévention"],
     features:["E-mails","2FA","Diagnostic"],
     preview:"assets/previews/identity.svg",
-    url:"/nyxa-identity/"
+    url:"/nyxa-identity/",
+    published:true
   },
   {
     id:"before",
@@ -29,7 +31,8 @@ const projects = [
     tags:["Checklist","Décision"],
     features:["8 situations","Points STOP","Progression"],
     preview:"assets/previews/before.svg",
-    url:"/nyxa-before/"
+    url:"/nyxa-before/",
+    published:true
   },
   {
     id:"proof",
@@ -39,7 +42,8 @@ const projects = [
     tags:["Dossier","Preuves"],
     features:["Timeline","Export","Impression"],
     preview:"assets/previews/proof.svg",
-    url:"/nyxa-proof/"
+    url:"/nyxa-proof/",
+    published:true
   },
   {
     id:"homebook",
@@ -49,7 +53,8 @@ const projects = [
     tags:["Maison","Organisation"],
     features:["Garanties","Maintenance","Sauvegarde"],
     preview:"assets/previews/homebook.svg",
-    url:"/nyxa-homebook/"
+    url:"/nyxa-homebook/",
+    published:true
   },
   {
     id:"linkcheck",
@@ -59,7 +64,8 @@ const projects = [
     tags:["Sécurité","Phishing","URL","VirusTotal"],
     features:["Vérification URL","Comprendre","Signalement"],
     preview:"assets/previews/linkcheck.svg",
-    url:"/nyxa-linkcheck/"
+    url:"/nyxa-linkcheck/",
+    published:true
   },
   {
     id:"reflex",
@@ -69,7 +75,8 @@ const projects = [
     tags:["Sécurité","Phishing","Sensibilisation"],
     features:["3 niveaux","Scénarios","Bilan"],
     preview:"assets/previews/reflex.svg",
-    url:"/nyxa-reflex/"
+    url:"/nyxa-reflex/",
+    published:true
   }
 ];
 
