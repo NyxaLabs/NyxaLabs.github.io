@@ -188,6 +188,7 @@ footer{
 .footer-brand img{width:38px;height:38px;border-radius:12px;object-fit:contain}
 .footer-brand div{display:flex;flex-direction:column}.footer-brand strong{color:var(--text)}.footer-brand span{font-size:11px}
 .mobile-nav{display:none}
+.mobile-panel-toggle{display:none}
 
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;min-height:auto;padding-top:60px}
@@ -225,6 +226,19 @@ footer{
   }
   .mobile-nav a{display:flex;flex-direction:column;align-items:center;gap:2px;text-decoration:none;color:var(--muted);font-size:10px;font-weight:800;padding:6px;border-radius:12px}
   .mobile-nav svg{width:21px}.mobile-nav a:active{background:rgba(255,255,255,.05);color:var(--text)}
+  .mobile-panel-toggle{
+    width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;
+    border:1px solid var(--line);border-radius:15px;background:var(--panel);color:var(--text);
+    padding:13px 15px;margin:0 0 12px;cursor:pointer;font-weight:900;text-align:left
+  }
+  .mobile-panel-toggle span{font-size:21px;color:var(--cyan);line-height:1}
+  .tools-section:not(.tools-open) #projectGrid,
+  .tools-section:not(.tools-open) #emptyState,
+  .values-section:not(.values-open) #whyValues{display:none}
+  .tools-section.tools-open .mobile-panel-toggle span,
+  .values-section.values-open .mobile-panel-toggle span{transform:rotate(45deg)}
+  .tools-section.tools-open .mobile-panel-toggle,
+  .values-section.values-open .mobile-panel-toggle{border-color:rgba(86,220,255,.28);background:rgba(86,220,255,.06)}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}

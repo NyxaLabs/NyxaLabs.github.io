@@ -25,27 +25,17 @@ const projects = [
     id:"proof",
     name:"NYXA Proof",
     description:"Construire un dossier de preuves propre : dates, événements, montants et chronologie pour un litige, SAV ou assurance.",
-    category:["organisation","quotidien"],
+    category:["organisation"],
     tags:["Dossier","Preuves"],
     features:["Timeline","Export","Impression"],
     preview:"assets/previews/proof.svg",
     url:"/nyxa-proof/"
   },
   {
-    id:"buycheck",
-    name:"NYXA BuyCheck",
-    description:"Vérifier un achat d’occasion avant de payer : téléphone, voiture, PC, console, électroménager ou vendeur en ligne.",
-    category:["quotidien","securite"],
-    tags:["Achat","Contrôle"],
-    features:["Score","Tests STOP","6 catégories"],
-    preview:"assets/previews/buycheck.svg",
-    url:"/nyxa-buycheck/"
-  },
-  {
     id:"homebook",
     name:"NYXA HomeBook",
     description:"Le carnet numérique de la maison : équipements, garanties, factures, références et prochaines maintenances.",
-    category:["organisation","quotidien"],
+    category:["organisation"],
     tags:["Maison","Organisation"],
     features:["Garanties","Maintenance","Sauvegarde"],
     preview:"assets/previews/homebook.svg",
@@ -67,6 +57,26 @@ const state = { filter:"all", search:"", online:new Map() };
 const grid = document.querySelector("#projectGrid");
 const liveCount = document.querySelector("#liveCount");
 const emptyState = document.querySelector("#emptyState");
+const toolsSection = document.querySelector(".tools-section");
+const toolsToggle = document.querySelector("#toolsToggle");
+const whySection = document.querySelector("#philosophie");
+const whyToggle = document.querySelector("#whyToggle");
+
+function isMobileLayout(){
+  return window.matchMedia("(max-width:680px)").matches;
+}
+
+function setMobilePortalPanel(section,toggle,open){
+  if(!isMobileLayout()) return;
+  if(open){
+    if(section===toolsSection) whySection.classList.remove("values-open");
+    if(section===whySection) toolsSection.classList.remove("tools-open");
+    if(toggle===toolsToggle) whyToggle.setAttribute("aria-expanded","false");
+    if(toggle===whyToggle) toolsToggle.setAttribute("aria-expanded","false");
+  }
+  section.classList.toggle(section===toolsSection?"tools-open":"values-open",open);
+  toggle.setAttribute("aria-expanded",open?"true":"false");
+}
 
 function cardTemplate(p){
   const online = state.online.get(p.id);
@@ -108,6 +118,7 @@ function render(){
 
 document.querySelector("#searchInput").addEventListener("input", e=>{
   state.search = e.target.value;
+  setMobilePortalPanel(toolsSection,toolsToggle,true);
   render();
 });
 
@@ -121,9 +132,18 @@ document.querySelectorAll(".filter").forEach(btn=>{
     btn.classList.add("active");
     btn.setAttribute("aria-pressed","true");
     state.filter = btn.dataset.filter;
+    setMobilePortalPanel(toolsSection,toolsToggle,true);
     render();
   });
 });
+
+toolsToggle.addEventListener("click",()=>setMobilePortalPanel(toolsSection,toolsToggle,!toolsSection.classList.contains("tools-open")));
+whyToggle.addEventListener("click",()=>setMobilePortalPanel(whySection,whyToggle,!whySection.classList.contains("values-open")));
+document.querySelectorAll('a[href="#outils"]').forEach(link=>link.addEventListener("click",()=>setMobilePortalPanel(toolsSection,toolsToggle,true)));
+document.querySelectorAll('.faq-item').forEach(item=>item.addEventListener('toggle',()=>{
+  if(!isMobileLayout()||!item.open)return;
+  document.querySelectorAll('.faq-item').forEach(other=>{if(other!==item)other.open=false});
+}));
 
 // Check whether each GitHub Pages project is actually online.
 // This works when the portal is itself hosted on nyxalabs.github.io.
@@ -131,7 +151,7 @@ async function checkProjects(){
   if(location.protocol === "file:"){
     // Local preview: show the known public project as live and others as pending.
     state.online.set("exposition", true);
-    ["before","proof","buycheck","homebook"].forEach(id=>state.online.set(id,false));
+    ["before","proof","homebook","linkcheck"].forEach(id=>state.online.set(id,false));
     render();
     return;
   }
