@@ -4,7 +4,10 @@ import { fileURLToPath } from "node:url";
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(scriptDir, "..");
-const portalApp = readFileSync(join(repoRoot, "nyxa-portal", "app.js"), "utf8");
+const portalAppPath = existsSync(join(repoRoot, "app.js"))
+  ? join(repoRoot, "app.js")
+  : join(repoRoot, "nyxa-portal", "app.js");
+const portalApp = readFileSync(portalAppPath, "utf8");
 const projectsSource = portalApp.match(/const projects\s*=\s*\[([\s\S]*?)\n\];/)?.[1] ?? "";
 const siteRoot = "https://nyxalabs.github.io";
 const urls = new Set([`${siteRoot}/`]);
