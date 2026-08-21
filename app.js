@@ -14,7 +14,7 @@ const projects = [
   {
     id:"before",
     name:"NYXA Before",
-    description:"Avant d’acheter, signer ou envoyer quelque chose : la checklist qui te rappelle ce qu’il faut vérifier avant qu’il soit trop tard.",
+    description:"Avant d’acheter, signer ou envoyer quelque chose : la checklist qui vous rappelle ce qu’il faut vérifier avant qu’il soit trop tard.",
     category:["quotidien"],
     tags:["Checklist","Décision"],
     features:["8 situations","Points STOP","Progression"],

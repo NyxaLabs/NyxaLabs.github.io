@@ -84,7 +84,7 @@ h1 span{background:linear-gradient(100deg,var(--cyan),#75a6ff 52%,var(--violet))
 .hero-stats span{font-size:12px;color:var(--muted)}
 .hero-orbit{position:relative;height:530px;display:grid;place-items:center}
 .portal-logo{position:relative;width:190px;height:190px;border-radius:46px;display:grid;place-items:center;z-index:4}
-.portal-logo img{width:100%;height:100%;border-radius:46px;object-fit:cover;box-shadow:0 30px 80px rgba(0,0,0,.38)}
+.portal-logo img{width:100%;height:100%;border-radius:46px;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.38)}
 .logo-glow{position:absolute;inset:18%;border-radius:50%;background:linear-gradient(130deg,var(--cyan),var(--violet));filter:blur(45px);z-index:-1;opacity:.65}
 .orbit-ring{position:absolute;border:1px solid rgba(145,136,255,.19);border-radius:50%;animation:spin linear infinite}
 .ring-1{width:300px;height:300px;animation-duration:24s}
@@ -176,7 +176,7 @@ footer{
   border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:13px
 }
 .footer-brand{display:flex;align-items:center;gap:10px}
-.footer-brand img{width:38px;height:38px;border-radius:12px}
+.footer-brand img{width:38px;height:38px;border-radius:12px;object-fit:contain}
 .footer-brand div{display:flex;flex-direction:column}.footer-brand strong{color:var(--text)}.footer-brand span{font-size:11px}
 .mobile-nav{display:none}
 
