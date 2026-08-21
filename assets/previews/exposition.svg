@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10192f"/><stop offset="1" stop-color="#25194c"/></linearGradient>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#54ddff"/><stop offset=".5" stop-color="#7b8cff"/><stop offset="1" stop-color="#b46cff"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="900" height="520" rx="36" fill="url(#bg)"/>
+<circle cx="160" cy="120" r="110" fill="#49d9ff" opacity=".08"/>
+<circle cx="780" cy="400" r="160" fill="#a665ff" opacity=".08"/>
+<g transform="translate(450 246)" filter="url(#glow)">
+  <path d="M0-145 116-96v91c0 88-48 145-116 183C-68 140-116 83-116-5v-91Z" fill="#0d1427" stroke="url(#g)" stroke-width="8"/>
+  <path d="M-42-15 0 28 72-55" fill="none" stroke="url(#g)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g fill="#dfe7ff" font-family="Arial,sans-serif" text-anchor="middle">
+  <text x="450" y="447" font-size="32" font-weight="700">Exposition numérique</text>
+  <text x="450" y="481" font-size="18" opacity=".62">Comprendre • Vérifier • Agir</text>
+</g>
+</svg>
