@@ -1,0 +1,39 @@
+NYXA LinkCheck
+================
+
+Nom public : NYXA LinkCheck
+Catégorie principale : Sécurité
+Sous-catégorie : Vérification de liens / Phishing
+Statut : Disponible
+Slug conseillé : nyxa-linkcheck
+URL publique prévue : https://nyxalabs.github.io/nyxa-linkcheck/
+Fichier d’aperçu : hero.svg
+
+Description courte :
+Vérifiez un lien avec VirusTotal, comprenez le résultat et accédez aux bons services de signalement en quelques étapes.
+
+Description portail :
+Un lien reçu par e-mail, SMS ou message vous paraît suspect ? NYXA LinkCheck vous envoie directement vers VirusTotal, vous aide à lire le résultat, puis vous guide vers les plateformes de signalement adaptées.
+
+Tags :
+Sécurité, Phishing, URL, VirusTotal, Signalement
+
+Fonctions :
+- Saisie unique de l’URL
+- Ouverture directe de la recherche VirusTotal
+- Explication simple du résultat
+- Conseils selon le niveau d’alerte
+- Signalement guidé : Phishing Initiative, Microsoft SmartScreen, PHAROS, PhishTank
+- URL copiée automatiquement avant l’ouverture d’un service de signalement
+- Aucun compte NYXA
+- Aucune clé API
+
+Navigation :
+- Bouton « Retour au portail NYXA »
+- Sur mobile : navigation rapide fixe « Vérifier / Comprendre / Signaler »
+- Sections longues repliées sur téléphone pour réduire le défilement
+
+Règle de publication :
+Classer ce projet dans la galerie / catégorie « Sécurité » du portail NYXA.
+Utiliser hero.svg comme visuel de la carte.
+Ne pas modifier la palette ou le contenu sans demande explicite.
