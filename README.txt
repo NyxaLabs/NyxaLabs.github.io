@@ -12,6 +12,8 @@ Le portail référence automatiquement :
 - /nyxa-proof/
 - /nyxa-homebook/
 - /nyxa-linkcheck/
+- /nyxa-identity/
+- /nyxa-reflex/
 
 Quand un de ces sites GitHub Pages existe réellement, sa carte passe automatiquement à "Disponible".
 Sinon elle reste "À publier".

@@ -1,0 +1,52 @@
+NYXA Identity
+=============
+
+Nom public : NYXA Identity
+Catégorie principale : Sécurité
+Sous-catégorie : Prévention / Identité numérique
+Statut : Disponible
+Slug conseillé : nyxa-identity
+URL publique prévue : https://nyxalabs.github.io/nyxa-identity/
+Fichier d’aperçu : hero.svg
+
+Description courte :
+Comprenez pourquoi votre e-mail, votre téléphone et vos comptes forment une identité numérique, puis apprenez les réflexes essentiels pour la protéger.
+
+Description portail :
+NYXA Identity initie le grand public à l’identité numérique : rôle central de la messagerie, compartimentage des adresses e-mail, mots de passe uniques, double authentification, prévention des arnaques et bonnes pratiques simples.
+
+Tags :
+Sécurité, Identité numérique, E-mail, 2FA, Prévention
+
+Points clés :
+- Exemple 100 % fictif
+- Explication du rôle central de l’adresse e-mail
+- Pourquoi utiliser plusieurs adresses e-mail
+- Différence entre adresse sensible, adresse quotidienne et alias
+- Mots de passe uniques
+- Double authentification
+- Codes SMS et validations sensibles
+- Risque de recoupement d’informations
+- Mini diagnostic interactif
+- Plan d’action simple
+- Sources officielles CNIL / Cybermalveillance / ANSSI
+- Ergonomie mobile avec sections repliables
+- Une seule grande section ouverte à la fois sur téléphone
+
+Navigation :
+- Comprendre
+- Vos e-mails
+- Réflexes
+- Diagnostic
+- Navigation mobile compacte
+
+Règle portail :
+Classer NYXA Identity dans la galerie / catégorie « Sécurité ».
+Utiliser hero.svg comme visuel de la carte.
+
+Règles de design :
+- Conserver la palette claire ivoire / terracotta / vert profond
+- Conserver le visuel supérieur sans chevauchement
+- Ne pas remplacer par une palette cyber sombre standard
+- Préserver l’ergonomie mobile compacte
+- Ne pas modifier les textes publics vers le tutoiement : le site doit vouvoyer

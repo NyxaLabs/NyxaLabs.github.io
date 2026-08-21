@@ -1,0 +1,72 @@
+NYXA Reflex
+===========
+
+Nom public : NYXA Reflex
+Catégorie principale : Sécurité
+Sous-catégorie : Sensibilisation / Entraînement anti-arnaques
+Statut : Disponible
+Slug conseillé : nyxa-reflex
+URL publique prévue : https://nyxalabs.github.io/nyxa-reflex/
+Fichier d’aperçu : hero.svg
+
+Description courte :
+Testez vos réflexes face aux arnaques numériques grâce à des scénarios interactifs inspirés de techniques réellement utilisées.
+
+Description portail :
+NYXA Reflex vous met en situation face à des SMS suspects, faux conseillers bancaires, faux remboursements, demandes de codes, QR codes et autres pièges courants. Choisissez votre réaction, découvrez les indices et apprenez le bon réflexe.
+
+Tags :
+Sécurité, Phishing, Arnaques, Sensibilisation, Quiz, 2FA
+
+Fonctionnalités :
+- Scénarios interactifs
+- 3 niveaux de difficulté : Initiation, Réaliste et Réflexe+
+- SMS suspects
+- Faux conseiller bancaire
+- Faux numéro d’opposition
+- Faux remboursement administratif
+- Demandes 2FA non sollicitées
+- QR codes douteux
+- Compte d’un proche compromis
+- Usurpation de numéro
+- Faux coursier bancaire
+- Situations légitimes intégrées pour éviter le réflexe « tout est une arnaque »
+- Explication après chaque choix
+- Indices à repérer
+- Réflexe à retenir
+- Bilan final basé sur les décisions
+- Compétences évaluées : vérification par un autre canal, codes/2FA, identité affichée, liens/domaines, mots de passe
+- Aucune donnée personnelle demandée ou envoyée
+
+Navigation :
+- Accueil
+- Test
+- Sources
+- Navigation mobile compacte
+
+Règle portail :
+Classer NYXA Reflex dans la galerie / catégorie « Sécurité ».
+Utiliser hero.svg comme aperçu visuel de la carte.
+
+Design :
+- Palette claire, ludique et très distincte des autres projets NYXA
+- Ivoire / bleu électrique / jaune / rose
+- Style quiz / jeu / affiche
+- Conserver les animations légères
+- Ne pas remplacer par une palette cyber sombre classique
+- Mobile-first : une situation à la fois
+- Aucun débordement horizontal à environ 390 px
+
+Règles de contenu :
+- Le site doit toujours utiliser le vouvoiement
+- Tous les exemples doivent rester fictifs
+- Ne jamais utiliser de marque réelle dans un scénario simulé
+- Ne jamais afficher de fausse « probabilité de piratage »
+- Le score doit uniquement refléter les réponses données dans le test
+- Conserver les avertissements indiquant qu’aucune donnée personnelle n’est collectée
+
+Publication :
+- Placer le projet dans : nyxa-reflex/
+- URL cible : https://nyxalabs.github.io/nyxa-reflex/
+- Ajouter la carte au portail NYXA
+- Vérifier le rendu ordinateur et smartphone
