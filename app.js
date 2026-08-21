@@ -2,7 +2,7 @@
 const projects = [
   {
     id:"exposition",
-    name:"Exposition numérique",
+    name:"NYXA Protect",
     description:"Comprendre les fuites de données, évaluer les risques et apprendre les bons réflexes face aux arnaques.",
     category:["securite"],
     tags:["Sécurité","Prévention"],
