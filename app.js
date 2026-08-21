@@ -50,6 +50,16 @@ const projects = [
     features:["Garanties","Maintenance","Sauvegarde"],
     preview:"assets/previews/homebook.svg",
     url:"/nyxa-homebook/"
+  },
+  {
+    id:"linkcheck",
+    name:"NYXA LinkCheck",
+    description:"Vérifiez un lien avec VirusTotal, comprenez le résultat et accédez aux bons services de signalement en quelques étapes.",
+    category:["securite"],
+    tags:["Sécurité","Phishing","URL","VirusTotal"],
+    features:["Vérification URL","Comprendre","Signalement"],
+    preview:"assets/previews/linkcheck.svg",
+    url:"/nyxa-linkcheck/"
   }
 ];
 
