@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080a12">
+  <meta name="description" content="NYXA — des outils simples, gratuits et pensés pour être utiles au quotidien.">
+  <meta property="og:title" content="NYXA — Outils utiles">
+  <meta property="og:description" content="Un portail unique pour retrouver les outils NYXA.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NYXA">
+  <meta property="og:url" content="https://nyxalabs.github.io/">
+  <meta property="og:image" content="https://nyxalabs.github.io/assets/nyxa-logo.png">
+  <meta property="og:image:alt" content="Logo NYXA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NYXA — Outils utiles">
+  <meta name="twitter:description" content="Un portail unique pour retrouver les outils NYXA.">
+  <meta name="twitter:image" content="https://nyxalabs.github.io/assets/nyxa-logo.png">
+  <link rel="canonical" href="https://nyxalabs.github.io/">
+  <title>NYXA — Outils utiles</title>
+  <link rel="icon" href="assets/nyxa-logo.png">
+  <link rel="apple-touch-icon" href="assets/icons/nyxa-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a href="#top" class="brand" aria-label="Accueil NYXA">
+      <img src="assets/nyxa-logo.png" alt="Logo NYXA">
+      <span>NYXA</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Navigation">
+      <a href="#outils">Outils</a>
+      <a href="#philosophie">Pourquoi NYXA</a>
+      <a href="#aide">Aide</a>
+    </nav>
+    <button id="themeToggle" class="icon-button" aria-label="Changer le thème" title="Changer le thème">
+      <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z"/></svg>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Portail officiel</div>
+        <h1>Un seul endroit.<br><span>Tout l’univers NYXA.</span></h1>
+        <p>Des outils simples, gratuits et faciles à utiliser. Pas besoin d’être expert : tu choisis ce dont tu as besoin, NYXA te guide.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#outils">Voir les outils <span>↓</span></a>
+          <button class="secondary-btn" id="installBtn" hidden>Installer NYXA</button>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="liveCount">1</strong><span>outil(s) en ligne</span></div>
+          <div><strong>100%</strong><span>compatible mobile</span></div>
+          <div><strong>0 €</strong><span>pour consulter</span></div>
+        </div>
+      </div>
+
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-ring ring-1"></div>
+        <div class="orbit-ring ring-2"></div>
+        <div class="orbit-ring ring-3"></div>
+        <div class="portal-logo">
+          <img src="assets/nyxa-logo.png" alt="">
+          <div class="logo-glow"></div>
+        </div>
+        <span class="orbit-dot dot-1"></span>
+        <span class="orbit-dot dot-2"></span>
+        <span class="orbit-dot dot-3"></span>
+      </div>
+    </section>
+
+    <section class="quick-guide" aria-label="Comment utiliser NYXA">
+      <div class="guide-step"><span>1</span><div><strong>Choisis</strong><small>le problème à résoudre</small></div></div>
+      <div class="guide-arrow">→</div>
+      <div class="guide-step"><span>2</span><div><strong>Suis</strong><small>les étapes simples</small></div></div>
+      <div class="guide-arrow">→</div>
+      <div class="guide-step"><span>3</span><div><strong>Agis</strong><small>avec une réponse claire</small></div></div>
+    </section>
+
+    <section id="outils" class="tools-section">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Les outils</span>
+          <h2>Qu’est-ce que tu veux faire ?</h2>
+        </div>
+        <p>Chaque outil a sa propre interface et son propre objectif. Le portail te dit aussi automatiquement lesquels sont déjà disponibles.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="searchInput" type="search" placeholder="Rechercher un outil…" autocomplete="off" aria-label="Rechercher un outil NYXA">
+        </label>
+        <div class="filters" role="group" aria-label="Filtrer les outils">
+          <button class="filter active" data-filter="all">Tous</button>
+          <button class="filter" data-filter="securite">Sécurité</button>
+          <button class="filter" data-filter="quotidien">Quotidien</button>
+          <button class="filter" data-filter="organisation">Organisation</button>
+        </div>
+      </div>
+
+      <div id="projectGrid" class="project-grid" aria-live="polite"></div>
+      <p id="emptyState" class="empty-state" hidden>Aucun outil ne correspond à cette recherche.</p>
+    </section>
+
+    <section id="philosophie" class="values">
+      <article>
+        <div class="value-icon cyan"><svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3 8 8 10 5-2 8-5 8-10V6Z"/><path d="m8 12 3 3 5-6"/></svg></div>
+        <h3>Simple avant tout</h3>
+        <p>Pas de jargon inutile. Les écrans expliquent quoi faire et dans quel ordre.</p>
+      </article>
+      <article>
+        <div class="value-icon violet"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M9 18h6"/></svg></div>
+        <h3>Pensé téléphone</h3>
+        <p>Les outils sont conçus pour rester utilisables sur smartphone, pas seulement sur ordinateur.</p>
+      </article>
+      <article>
+        <div class="value-icon coral"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 7h14M5 17h14"/></svg></div>
+        <h3>Utile, pas décoratif</h3>
+        <p>Chaque projet répond à un besoin concret : vérifier, décider, organiser ou se protéger.</p>
+      </article>
+    </section>
+
+    <section id="aide" class="help-card">
+      <div>
+        <span class="section-kicker">Besoin de commencer ?</span>
+        <h2>Tu ne sais pas quel outil choisir ?</h2>
+        <p>Utilise la recherche ci-dessus ou commence par l’outil marqué « recommandé ». Les cartes expliquent exactement à quoi sert chaque projet.</p>
+      </div>
+      <a href="#outils" class="primary-btn">Choisir un outil</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <img src="assets/nyxa-logo.png" alt="">
+      <div><strong>NYXA</strong><span>Des outils simples pour les vraies situations.</span></div>
+    </div>
+    <span>© <span id="year"></span> NYXA</span>
+  </footer>
+
+  <nav class="mobile-nav" aria-label="Navigation mobile">
+    <a href="#top"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8"/><path d="M5 10v11h14V10"/><path d="M9 21v-6h6v6"/></svg><span>Accueil</span></a>
+    <a href="#outils"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg><span>Outils</span></a>
+    <a href="#aide"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.8 9a2.3 2.3 0 0 1 4.4 1c0 1.7-2.2 2-2.2 3.5"/><path d="M12 17h.01"/></svg><span>Aide</span></a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

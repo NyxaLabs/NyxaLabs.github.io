@@ -1,0 +1,22 @@
+{
+  "name": "NYXA — Outils utiles",
+  "short_name": "NYXA",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080a12",
+  "theme_color": "#080a12",
+  "description": "Le portail des outils NYXA.",
+  "icons": [
+    {
+      "src": "assets/icons/nyxa-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/nyxa-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
