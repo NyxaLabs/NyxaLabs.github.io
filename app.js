@@ -12,6 +12,16 @@ const projects = [
     recommended:true
   },
   {
+    id:"identity",
+    name:"NYXA Identity",
+    description:"Comprenez le rôle de votre e-mail, de vos comptes et de vos mots de passe, puis adoptez les réflexes essentiels pour protéger votre identité numérique.",
+    category:["securite"],
+    tags:["Sécurité","Identité numérique","Prévention"],
+    features:["E-mails","2FA","Diagnostic"],
+    preview:"assets/previews/identity.svg",
+    url:"/nyxa-identity/"
+  },
+  {
     id:"before",
     name:"NYXA Before",
     description:"Avant d’acheter, signer ou envoyer quelque chose : la checklist qui vous rappelle ce qu’il faut vérifier avant qu’il soit trop tard.",
@@ -50,6 +60,16 @@ const projects = [
     features:["Vérification URL","Comprendre","Signalement"],
     preview:"assets/previews/linkcheck.svg",
     url:"/nyxa-linkcheck/"
+  },
+  {
+    id:"reflex",
+    name:"NYXA Reflex",
+    description:"Testez vos réflexes face aux arnaques numériques grâce à des scénarios interactifs inspirés de techniques réellement utilisées.",
+    category:["securite"],
+    tags:["Sécurité","Phishing","Sensibilisation"],
+    features:["3 niveaux","Scénarios","Bilan"],
+    preview:"assets/previews/reflex.svg",
+    url:"/nyxa-reflex/"
   }
 ];
 
