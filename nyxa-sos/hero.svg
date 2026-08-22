@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">NYXA SOS</title>
+<desc id="desc">Aperçu de NYXA SOS, un guide d’action immédiate après une erreur ou un incident numérique.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fbfdff"/>
+    <stop offset=".65" stop-color="#f4f8ff"/>
+    <stop offset="1" stop-color="#eef6ff"/>
+  </linearGradient>
+  <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#1748ff"/>
+    <stop offset="1" stop-color="#00b7d6"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0d2a57" flood-opacity=".12"/>
+  </filter>
+</defs>
+
+<rect width="1200" height="675" rx="40" fill="url(#bg)"/>
+<circle cx="100" cy="25" r="210" fill="#1748ff" opacity=".08"/>
+<circle cx="1120" cy="75" r="225" fill="#00b7d6" opacity=".08"/>
+
+<g font-family="Arial,Helvetica,sans-serif">
+  <rect x="78" y="66" width="242" height="42" rx="21" fill="#e9efff"/>
+  <circle cx="99" cy="87" r="7" fill="#f1364e"/>
+  <text x="116" y="92" font-size="15" font-weight="800" fill="#1748ff">GUIDE D’ACTION IMMÉDIATE</text>
+
+  <text x="78" y="188" font-size="61" font-weight="900" fill="#111827">Vous pensez avoir</text>
+  <text x="78" y="254" font-size="61" font-weight="900" fill="#111827">fait une erreur ?</text>
+  <text x="78" y="322" font-size="61" font-weight="900" fill="#1748ff">Agissez dans le bon ordre.</text>
+
+  <text x="78" y="371" font-size="21" fill="#64748b">Sélectionnez ce qui vient de vous arriver.</text>
+  <text x="78" y="403" font-size="21" fill="#64748b">NYXA construit ensuite un plan d’action priorisé.</text>
+</g>
+
+<!-- Console -->
+<g transform="translate(746 76)" filter="url(#shadow)" font-family="Arial,Helvetica,sans-serif">
+  <rect width="370" height="500" rx="32" fill="#ffffff" stroke="#dce5f2"/>
+  <text x="24" y="38" font-size="13" font-weight="900" fill="#0a2c5e">NYXA • CENTRE D’ACTION</text>
+  <rect x="245" y="20" width="99" height="28" rx="14" fill="#fff0f2" stroke="#ffd1d8"/>
+  <circle cx="260" cy="34" r="5" fill="#f1364e"/>
+  <text x="271" y="38" font-size="10" font-weight="800" fill="#f1364e">PRIORISATION</text>
+
+  <path d="M22 112 H78 L95 112 L110 75 L124 145 L144 95 L160 112 H224 L240 112 L255 68 L272 150 L290 92 L308 112 H350"
+        fill="none" stroke="url(#pulse)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g transform="translate(22 174)">
+    <rect width="150" height="93" rx="18" fill="#f7faff" stroke="#dce5f2"/>
+    <rect x="14" y="15" width="36" height="36" rx="11" fill="#edf3ff"/>
+    <text x="32" y="40" text-anchor="middle" font-size="18">💳</text>
+    <text x="62" y="34" font-size="14" font-weight="800" fill="#111827">Banque</text>
+    <text x="62" y="53" font-size="10" fill="#64748b">priorité maximale</text>
+    <text x="62" y="68" font-size="10" fill="#64748b">si une action est validée</text>
+  </g>
+
+  <g transform="translate(198 174)">
+    <rect width="150" height="93" rx="18" fill="#f7faff" stroke="#dce5f2"/>
+    <rect x="14" y="15" width="36" height="36" rx="11" fill="#edf3ff"/>
+    <text x="32" y="40" text-anchor="middle" font-size="18">✉️</text>
+    <text x="62" y="34" font-size="14" font-weight="800" fill="#111827">Messagerie</text>
+    <text x="62" y="53" font-size="10" fill="#64748b">reprendre le contrôle</text>
+    <text x="62" y="68" font-size="10" fill="#64748b">et vérifier les accès</text>
+  </g>
+
+  <g transform="translate(22 285)">
+    <rect width="150" height="93" rx="18" fill="#f7faff" stroke="#dce5f2"/>
+    <rect x="14" y="15" width="36" height="36" rx="11" fill="#edf3ff"/>
+    <text x="32" y="40" text-anchor="middle" font-size="18">🔑</text>
+    <text x="62" y="34" font-size="14" font-weight="800" fill="#111827">Mots de passe</text>
+    <text x="62" y="53" font-size="10" fill="#64748b">changer les secrets</text>
+    <text x="62" y="68" font-size="10" fill="#64748b">qui ont été exposés</text>
+  </g>
+
+  <g transform="translate(198 285)">
+    <rect width="150" height="93" rx="18" fill="#f7faff" stroke="#dce5f2"/>
+    <rect x="14" y="15" width="36" height="36" rx="11" fill="#edf3ff"/>
+    <text x="32" y="40" text-anchor="middle" font-size="18">🦠</text>
+    <text x="62" y="34" font-size="14" font-weight="800" fill="#111827">Appareil</text>
+    <text x="62" y="53" font-size="10" fill="#64748b">isoler s’il existe</text>
+    <text x="62" y="68" font-size="10" fill="#64748b">un risque d’infection</text>
+  </g>
+
+  <g transform="translate(22 408)">
+    <rect width="326" height="60" rx="18" fill="#fff7f8" stroke="#ffcbd2"/>
+    <rect width="4" height="60" rx="2" fill="#f1364e"/>
+    <text x="18" y="23" font-size="11" font-weight="900" fill="#a10d22">PRIORITÉ</text>
+    <text x="18" y="42" font-size="11" fill="#7f3040">Les actions urgentes remontent automatiquement.</text>
+  </g>
+</g>
+
+<g transform="translate(78 463)" font-family="Arial,Helvetica,sans-serif">
+  <rect width="570" height="128" rx="25" fill="#ffffff" stroke="#dce5f2"/>
+  <text x="26" y="39" font-size="18" font-weight="900" fill="#0a2c5e">Un seul plan, même si plusieurs choses se sont produites</text>
+  <text x="26" y="70" font-size="14" fill="#64748b">À faire maintenant  •  À faire aujourd’hui  •  À surveiller ensuite</text>
+  <text x="26" y="98" font-size="14" fill="#64748b">Suivi par cases à cocher + téléchargement du plan complet en PDF</text>
+</g>
+
+<g transform="translate(78 611)" font-family="Arial,Helvetica,sans-serif">
+  <rect width="192" height="44" rx="22" fill="#1748ff"/>
+  <text x="96" y="28" text-anchor="middle" font-size="14" font-weight="800" fill="#ffffff">Construire mon plan</text>
+
+  <rect x="208" width="192" height="44" rx="22" fill="#edf3ff"/>
+  <text x="304" y="28" text-anchor="middle" font-size="14" font-weight="800" fill="#0a2c5e">Télécharger le PDF</text>
+</g>
+</svg>

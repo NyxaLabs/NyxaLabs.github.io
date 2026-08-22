@@ -1,0 +1,102 @@
+NYXA SOS
+========
+
+Nom public : NYXA SOS
+Catégorie principale : Sécurité
+Sous-catégorie : Assistance / Réaction après incident
+Statut : Disponible
+Slug conseillé : nyxa-sos
+URL publique prévue : https://nyxalabs.github.io/nyxa-sos/
+Fichier d’aperçu : hero.svg
+
+Description courte :
+Vous pensez avoir cliqué, donné un mot de passe, validé un code ou subi une arnaque ? NYXA SOS construit un plan d’action priorisé pour savoir quoi faire immédiatement.
+
+Description portail :
+NYXA SOS aide le grand public à réagir après une erreur ou un incident numérique. Sélectionnez ce qui s’est produit, puis obtenez une checklist organisée entre actions immédiates, mesures à faire aujourd’hui et points à surveiller ensuite.
+
+Tags :
+Sécurité, Urgence, Arnaque, Phishing, Compte piraté, Banque, Assistance
+
+Fonctionnalités :
+- Sélection de plusieurs incidents en même temps
+- Fusion automatique des recommandations identiques
+- Priorisation des actions les plus urgentes
+- Trois niveaux de temps :
+  1. À faire maintenant
+  2. À faire aujourd’hui
+  3. À surveiller ensuite
+- Cases à cocher pour suivre les actions directement sur téléphone ou ordinateur
+- Barre de progression
+- Export du plan complet en PDF
+- Le PDF contient toutes les recommandations, même si elles ne sont pas cochées
+- Les étapes déjà cochées peuvent apparaître comme terminées dans le PDF
+- PDF autonome généré directement dans le navigateur
+- PDF sobre avec logo NYXA SOS, fond blanc et bleu nuit
+- Rouge utilisé uniquement pour les véritables urgences
+- Aucun CDN requis pour générer le PDF
+- Aucune donnée personnelle demandée
+- Aucun compte utilisateur
+- Liens vers les services officiels lorsque nécessaire
+- Orientation possible vers 17Cyber
+- Lien vers NYXA LinkCheck ou NYXA Protect quand pertinent
+
+Situations prises en charge :
+- J’ai cliqué sur un lien suspect
+- J’ai saisi un mot de passe
+- J’ai donné un code SMS ou validé une notification
+- J’ai donné des informations bancaires
+- J’ai validé un paiement, un virement ou une opération
+- Ma boîte mail semble piratée
+- Un autre compte a été piraté
+- Mon appareil semble infecté
+- Mon téléphone est perdu ou volé
+- J’ai envoyé de l’argent à un escroc
+- Mes données personnelles ont fuité
+
+Navigation :
+- Retour au portail NYXA
+- Mon urgence
+- Mon plan
+- Sources
+- Navigation mobile compacte
+
+Règle portail :
+Classer NYXA SOS dans la galerie / catégorie « Sécurité ».
+Utiliser hero.svg comme aperçu visuel de la carte.
+
+Design :
+- Identité visuelle claire de type centre d’action / assistance
+- Blanc, bleu nuit, bleu électrique et cyan
+- Rouge uniquement pour les urgences
+- Ne pas remplacer par une palette cyber sombre classique
+- Conserver le visuel de monitoring animé
+- Interface mobile compacte
+- Aucun débordement horizontal à environ 390 px
+
+Règles PDF :
+- Conserver le PDF sobre validé
+- Logo NYXA en haut à gauche
+- Texte « NYXA SOS » à côté
+- Présentation blanche et lisible
+- Très peu de couleurs
+- Bleu nuit comme couleur principale
+- Rouge uniquement pour « Urgent »
+- Pas de séparateurs horizontaux entre chaque action
+- Les lignes des titres de section commencent au niveau du texte, pas sous les cases
+- Espacements réguliers entre les actions
+- Conserver toutes les recommandations dans le PDF, même non cochées
+
+Règles de contenu :
+- Tout le site doit utiliser le vouvoiement
+- Ne jamais demander de nom, adresse e-mail, numéro de carte, mot de passe ou autre donnée personnelle
+- NYXA SOS doit rester un guide de premiers réflexes et ne pas prétendre remplacer la banque, l’opérateur, 17Cyber ou les services officiels
+- Ne jamais inventer de délai, garantie de remboursement ou probabilité de récupération
+- Les actions financières urgentes doivent rester prioritaires
+
+Publication :
+- Placer le projet dans : nyxa-sos/
+- URL cible : https://nyxalabs.github.io/nyxa-sos/
+- Ajouter la carte au portail NYXA
+- Vérifier le site sur ordinateur et smartphone
+- Tester la génération PDF après publication

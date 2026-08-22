@@ -77,6 +77,17 @@ const projects = [
     preview:"assets/previews/reflex.svg",
     url:"/nyxa-reflex/",
     published:true
+  },
+  {
+    id:"sos",
+    name:"NYXA SOS",
+    description:"Après une erreur ou un incident numérique, construisez un plan d’action priorisé : maintenant, aujourd’hui, puis ensuite.",
+    category:["securite"],
+    tags:["Sécurité","Urgence","Arnaque","Phishing"],
+    features:["Premiers réflexes","Plan priorisé","Export PDF"],
+    preview:"assets/previews/sos.svg",
+    url:"/nyxa-sos/",
+    published:true
   }
 ];
 
@@ -178,7 +189,7 @@ async function checkProjects(){
   if(location.protocol === "file:"){
     // Local preview: show the known public project as live and others as pending.
     state.online.set("exposition", true);
-    ["before","proof","homebook","linkcheck"].forEach(id=>state.online.set(id,false));
+    ["before","proof","homebook","linkcheck","reflex","sos"].forEach(id=>state.online.set(id,false));
     render();
     return;
   }
