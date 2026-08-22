@@ -78,6 +78,16 @@ h1 span{background:linear-gradient(100deg,var(--cyan),#75a6ff 52%,var(--violet))
 }
 .primary-btn{background:linear-gradient(130deg,var(--cyan),#76a6ff 52%,var(--violet));color:#07101a;border:0;box-shadow:0 14px 34px rgba(86,220,255,.14)}
 .secondary-btn{background:var(--panel);color:var(--text)}
+.share-panel{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;background:rgba(3,6,15,.70);backdrop-filter:blur(16px)}
+.share-panel[hidden]{display:none}
+.share-card{position:relative;width:min(100%,440px);padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--panel-solid);box-shadow:var(--shadow)}
+.share-card h2{font-size:30px;line-height:1.08;letter-spacing:-.04em;margin:8px 0 10px}
+.share-card p{color:var(--muted);margin:0 0 20px}
+.share-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border:1px solid var(--line);border-radius:10px;background:var(--panel);font-size:24px;line-height:1;cursor:pointer}
+.share-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.share-option{min-height:46px;display:flex;align-items:center;justify-content:center;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--text);text-decoration:none;font-weight:850;cursor:pointer}
+.share-option:hover{border-color:var(--cyan);color:var(--cyan)}
+.share-status{min-height:1.5em;margin:16px 0 0!important;font-size:13px;color:var(--green)!important}
 .hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:35px}
 .hero-stats div{display:flex;flex-direction:column}
 .hero-stats strong{font-size:20px}
@@ -211,6 +221,8 @@ footer{
   .dot-1{top:40px;left:70px}.dot-2{bottom:35px;right:62px}.dot-3{top:145px;right:2px}
   h1{font-size:44px}.hero-copy>p{font-size:16px}
   .hero-actions>*{width:100%}
+  .share-panel{align-items:end;padding:12px}
+  .share-card{padding:24px 18px calc(24px + env(safe-area-inset-bottom))}
   .hero-stats{justify-content:space-between;gap:10px}.hero-stats strong{font-size:18px}.hero-stats span{font-size:10px}
   .quick-guide{grid-template-columns:1fr;gap:10px;margin-bottom:54px}.guide-arrow{transform:rotate(90deg);justify-self:center;line-height:1}
   .section-heading h2,.help-card h2{font-size:32px}
