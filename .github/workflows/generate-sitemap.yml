@@ -6,8 +6,7 @@ on:
     paths:
       - "app.js"
       - "index.html"
-      - "exposition-numerique/**"
-      - "nyxa-*/**"
+      - "*/index.html"
       - "scripts/generate-sitemap.mjs"
       - ".github/workflows/generate-sitemap.yml"
   workflow_dispatch:
@@ -15,15 +14,29 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: generate-sitemap-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   sitemap:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Generate sitemap
-        run: node scripts/generate-sitemap.mjs
+      - name: Synchroniser avec main
+        run: git pull --rebase origin main
+
+      - name: Générer et vérifier le sitemap
+        run: |
+          node scripts/generate-sitemap.mjs
+          test -s sitemap.xml
+          grep -q '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' sitemap.xml
 
       - name: Commit sitemap when changed
         run: |
@@ -32,7 +45,24 @@ jobs:
           git add sitemap.xml
           if git diff --cached --quiet; then
             echo "Sitemap déjà à jour."
-          else
-            git commit -m "Mettre à jour le sitemap"
-            git push
+            exit 0
           fi
+
+          git commit -m "Mettre à jour le sitemap"
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Sitemap publié."
+              exit 0
+            fi
+
+            echo "main a changé pendant l'exécution, nouvelle tentative ${attempt}/3..."
+            git pull --rebase origin main
+            node scripts/generate-sitemap.mjs
+            git add sitemap.xml
+            git commit --amend --no-edit
+            sleep 2
+          done
+
+          echo "Impossible de publier le sitemap après 3 tentatives."
+          exit 1
