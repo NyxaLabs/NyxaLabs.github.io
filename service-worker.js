@@ -1,6 +1,6 @@
-const CACHE="nyxa-portal-v20";
+const CACHE="nyxa-portal-v21";
 const ASSETS=[
-  "./","./index.html","./styles.css","./app.js?v=19","./manifest.webmanifest",
+  "./","./index.html","./styles.css","./app.js?v=20","./manifest.webmanifest",
   "./assets/nyxa-logo.png",
   "./assets/icons/nyxa-192.png","./assets/icons/nyxa-512.png",
   "./assets/previews/exposition.svg","./assets/previews/before.svg",
