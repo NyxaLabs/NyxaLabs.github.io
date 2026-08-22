@@ -1,12 +1,12 @@
-const CACHE="nyxa-portal-v13";
+const CACHE="nyxa-portal-v14";
 const ASSETS=[
-  "./","./index.html","./styles.css","./app.js?v=12","./manifest.webmanifest",
+  "./","./index.html","./styles.css","./app.js?v=13","./manifest.webmanifest",
   "./assets/nyxa-logo.png",
   "./assets/icons/nyxa-192.png","./assets/icons/nyxa-512.png",
   "./assets/previews/exposition.svg","./assets/previews/before.svg",
   "./assets/previews/proof.svg","./assets/previews/homebook.svg",
   "./assets/previews/linkcheck.svg","./assets/previews/identity.svg",
-  "./assets/previews/reflex.svg"
+  "./assets/previews/reflex.svg","./assets/previews/sos.svg"
 ];
 
 self.addEventListener("install",event=>{
