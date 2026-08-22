@@ -225,7 +225,7 @@ const shareClose = document.querySelector("#shareClose");
 const shareNative = document.querySelector("#shareNative");
 const shareStatus = document.querySelector("#shareStatus");
 const shareUrl = "https://nyxalabs.github.io/";
-const shareText = "Un doute, une arnaque ou une décision importante ? NYXA vous aide à vérifier, vous protéger et agir avec des outils gratuits, simples et guidés.";
+const shareText = "Un doute, un lien suspect ou une situation compliquée ? Découvrez l’outil NYXA qui peut vous aider à y voir clair et à savoir quoi faire, gratuitement.";
 function isPhoneLayout(){
   return matchMedia("(max-width:680px)").matches || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
 }
@@ -262,7 +262,7 @@ function openShareFallback(){
 function closeShare(){ sharePanel.hidden = true; }
 shareBtn.addEventListener("click",()=>openShareFallback());
 shareNative.addEventListener("click",async()=>{
-  const shareData = {title:"NYXA — Vérifier, se protéger, agir",text:shareText,url:shareUrl};
+  const shareData = {title:"NYXA — L’outil qu’il vous faut au bon moment",text:shareText,url:shareUrl};
   if(typeof navigator.share === "function"){
     try{ await navigator.share(shareData); shareStatus.textContent = "Partage ouvert."; }
     catch(error){ if(error?.name === "AbortError") shareStatus.textContent = "Partage annulé."; else shareStatus.textContent = "Le partage du téléphone n’est pas disponible."; }
