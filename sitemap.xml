@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nyxalabs.github.io/</loc></url>
   <url><loc>https://nyxalabs.github.io/exposition-numerique/</loc></url>
-  <url><loc>https://nyxalabs.github.io/nyxa-identity/</loc></url>
   <url><loc>https://nyxalabs.github.io/nyxa-before/</loc></url>
-  <url><loc>https://nyxalabs.github.io/nyxa-proof/</loc></url>
   <url><loc>https://nyxalabs.github.io/nyxa-homebook/</loc></url>
+  <url><loc>https://nyxalabs.github.io/nyxa-identity/</loc></url>
   <url><loc>https://nyxalabs.github.io/nyxa-linkcheck/</loc></url>
+  <url><loc>https://nyxalabs.github.io/nyxa-proof/</loc></url>
   <url><loc>https://nyxalabs.github.io/nyxa-reflex/</loc></url>
   <url><loc>https://nyxalabs.github.io/nyxa-sos/</loc></url>
 </urlset>
