@@ -225,7 +225,14 @@ const shareClose = document.querySelector("#shareClose");
 const shareNative = document.querySelector("#shareNative");
 const shareStatus = document.querySelector("#shareStatus");
 const shareUrl = "https://nyxalabs.github.io/";
-const shareText = "Un doute, un lien suspect ou une situation compliquée ? Découvrez l’outil NYXA qui peut vous aider à y voir clair et à savoir quoi faire, gratuitement.";
+const shareText = `Vos données sont dans la nature. Les arnaques qui arrivent vont être sur-mesure.
+Face à cette vague, il ne faut pas paniquer : il faut s’armer.
+
+NYXA Labs, c’est un portail d’outils simples pour vérifier un lien suspect, comprendre un rapport VirusTotal, tester vos réflexes face aux pièges ou monter un dossier de preuves après un litige.
+
+Tout est là, sans jargon.
+
+👉 https://nyxalabs.github.io/`;
 function isPhoneLayout(){
   return matchMedia("(max-width:680px)").matches || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
 }
@@ -246,14 +253,14 @@ installBtn.addEventListener("click", async ()=>{
 
 function setShareLinks(){
   const encodedUrl = encodeURIComponent(shareUrl);
-  const encodedText = encodeURIComponent(`${shareText} ${shareUrl}`);
+  const encodedText = encodeURIComponent(shareText);
   document.querySelector("#shareSms").href = `sms:?&body=${encodedText}`;
   document.querySelector("#shareWhatsapp").href = `https://wa.me/?text=${encodedText}`;
   document.querySelector("#shareFacebook").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-  document.querySelector("#shareX").href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodedUrl}`;
-  document.querySelector("#shareTelegram").href = `https://t.me/share/url?url=${encodedUrl}&text=${encodeURIComponent(shareText)}`;
+  document.querySelector("#shareX").href = `https://twitter.com/intent/tweet?text=${encodedText}`;
+  document.querySelector("#shareTelegram").href = `https://t.me/share/url?url=&text=${encodedText}`;
   document.querySelector("#shareLinkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-  document.querySelector("#shareEmail").href = `mailto:?subject=${encodeURIComponent("Découvrez NYXA")}&body=${encodedText}`;
+  document.querySelector("#shareEmail").href = `mailto:?subject=${encodeURIComponent("NYXA Labs : il faut s’armer")}&body=${encodedText}`;
   shareNative.hidden = typeof navigator.share !== "function";
 }
 function openShareFallback(){
@@ -265,7 +272,7 @@ function openShareFallback(){
 function closeShare(){ sharePanel.hidden = true; }
 shareBtn.addEventListener("click",()=>openShareFallback());
 shareNative.addEventListener("click",async()=>{
-  const shareData = {title:"NYXA — L’outil qu’il vous faut au bon moment",text:shareText,url:shareUrl};
+  const shareData = {title:"NYXA Labs — Il faut s’armer",text:shareText};
   if(typeof navigator.share === "function"){
     try{ await navigator.share(shareData); shareStatus.textContent = "Partage ouvert."; }
     catch(error){ if(error?.name === "AbortError") shareStatus.textContent = "Partage annulé."; else shareStatus.textContent = "Le partage du téléphone n’est pas disponible."; }
