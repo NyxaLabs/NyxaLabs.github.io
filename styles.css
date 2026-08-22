@@ -88,6 +88,7 @@ h1 span{background:linear-gradient(100deg,var(--cyan),#75a6ff 52%,var(--violet))
 .share-option{min-height:46px;display:flex;align-items:center;justify-content:center;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--text);text-decoration:none;font-weight:850;cursor:pointer}
 .share-native{grid-column:1/-1;background:linear-gradient(130deg,var(--cyan),#76a6ff 52%,var(--violet));color:#07101a;border:0}
 .share-option:hover{border-color:var(--cyan);color:var(--cyan)}
+.share-hint{font-size:12px!important;line-height:1.45;margin:14px 0 0!important;color:var(--muted)!important}
 .share-status{min-height:1.5em;margin:16px 0 0!important;font-size:13px;color:var(--green)!important}
 .hero-stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:35px}
 .hero-stats div{display:flex;flex-direction:column}
