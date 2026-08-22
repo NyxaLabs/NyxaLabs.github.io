@@ -223,6 +223,7 @@ const shareBtn = document.querySelector("#shareBtn");
 const sharePanel = document.querySelector("#sharePanel");
 const shareClose = document.querySelector("#shareClose");
 const shareNative = document.querySelector("#shareNative");
+const shareFacebook = document.querySelector("#shareFacebook");
 const shareStatus = document.querySelector("#shareStatus");
 const shareUrl = "https://nyxalabs.github.io/";
 const shareText = `Vos données sont dans la nature. Les arnaques qui arrivent vont être sur-mesure. ⚠️
@@ -269,12 +270,27 @@ function openShareFallback(){
 }
 function closeShare(){ sharePanel.hidden = true; }
 shareBtn.addEventListener("click",()=>openShareFallback());
+async function tryNativeShare(){
+  if(typeof navigator.share !== "function") return false;
+  try{
+    await navigator.share({title:"NYXA Labs — Il faut s’armer",text:shareText});
+    shareStatus.textContent = "Partage ouvert.";
+    return true;
+  }catch(error){
+    if(error?.name === "AbortError"){
+      shareStatus.textContent = "Partage annulé.";
+      return true;
+    }
+    return false;
+  }
+}
 shareNative.addEventListener("click",async()=>{
-  const shareData = {title:"NYXA Labs — Il faut s’armer",text:shareText};
-  if(typeof navigator.share === "function"){
-    try{ await navigator.share(shareData); shareStatus.textContent = "Partage ouvert."; }
-    catch(error){ if(error?.name === "AbortError") shareStatus.textContent = "Partage annulé."; else shareStatus.textContent = "Le partage du téléphone n’est pas disponible."; }
-  }else shareStatus.textContent = "Le partage du téléphone n’est pas disponible.";
+  if(!(await tryNativeShare())) shareStatus.textContent = "Le partage du téléphone n’est pas disponible.";
+});
+shareFacebook.addEventListener("click",async event=>{
+  if(!isPhoneLayout() || typeof navigator.share !== "function") return;
+  event.preventDefault();
+  if(!(await tryNativeShare())) window.location.assign(event.currentTarget.href);
 });
 shareClose.addEventListener("click",closeShare);
 sharePanel.addEventListener("click",event=>{ if(event.target === sharePanel) closeShare(); });
