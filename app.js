@@ -251,6 +251,9 @@ function setShareLinks(){
   document.querySelector("#shareWhatsapp").href = `https://wa.me/?text=${encodedText}`;
   document.querySelector("#shareFacebook").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
   document.querySelector("#shareX").href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodedUrl}`;
+  document.querySelector("#shareTelegram").href = `https://t.me/share/url?url=${encodedUrl}&text=${encodeURIComponent(shareText)}`;
+  document.querySelector("#shareLinkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+  document.querySelector("#shareEmail").href = `mailto:?subject=${encodeURIComponent("Découvrez NYXA")}&body=${encodedText}`;
   shareNative.hidden = typeof navigator.share !== "function";
 }
 function openShareFallback(){
