@@ -225,13 +225,11 @@ const shareClose = document.querySelector("#shareClose");
 const shareNative = document.querySelector("#shareNative");
 const shareStatus = document.querySelector("#shareStatus");
 const shareUrl = "https://nyxalabs.github.io/";
-const shareText = `Vos données sont dans la nature. Les arnaques qui arrivent vont être sur-mesure.
-Face à cette vague, il ne faut pas paniquer : il faut s’armer.
+const shareText = `Vos données sont dans la nature. Les arnaques qui arrivent vont être sur-mesure. ⚠️
+Face à cette vague, pas de panique : il faut s’armer.
 
-NYXA Labs, c’est un portail d’outils simples pour vérifier un lien suspect, comprendre un rapport VirusTotal, tester vos réflexes face aux pièges ou monter un dossier de preuves après un litige.
-
-Tout est là, sans jargon.
-
+NYXA Labs vous aide à vérifier, comprendre et agir.
+Simple. Gratuit. Sans jargon.
 👉 https://nyxalabs.github.io/`;
 function isPhoneLayout(){
   return matchMedia("(max-width:680px)").matches || /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
