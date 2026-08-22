@@ -208,6 +208,12 @@ document.querySelector("#themeToggle").addEventListener("click",()=>{
 // PWA install prompt
 let deferredPrompt = null;
 const installBtn = document.querySelector("#installBtn");
+const shareBtn = document.querySelector("#shareBtn");
+const sharePanel = document.querySelector("#sharePanel");
+const shareClose = document.querySelector("#shareClose");
+const shareStatus = document.querySelector("#shareStatus");
+const shareUrl = "https://nyxalabs.github.io/";
+const shareText = "Découvrez la suite NYXA : des outils simples, gratuits et utiles au quotidien.";
 window.addEventListener("beforeinstallprompt", e=>{
   e.preventDefault();
   deferredPrompt = e;
@@ -220,6 +226,37 @@ installBtn.addEventListener("click", async ()=>{
   deferredPrompt = null;
   installBtn.hidden = true;
 });
+
+function setShareLinks(){
+  const encodedUrl = encodeURIComponent(shareUrl);
+  const encodedText = encodeURIComponent(`${shareText} ${shareUrl}`);
+  document.querySelector("#shareSms").href = `sms:?&body=${encodedText}`;
+  document.querySelector("#shareWhatsapp").href = `https://wa.me/?text=${encodedText}`;
+  document.querySelector("#shareFacebook").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+  document.querySelector("#shareX").href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodedUrl}`;
+}
+function openShareFallback(){
+  setShareLinks();
+  sharePanel.hidden = false;
+  shareStatus.textContent = "";
+  shareClose.focus();
+}
+function closeShare(){ sharePanel.hidden = true; }
+shareBtn.addEventListener("click",async()=>{
+  const shareData = {title:"NYXA — Outils utiles",text:shareText,url:shareUrl};
+  if(typeof navigator.share === "function"){
+    try{ await navigator.share(shareData); }
+    catch(error){ if(error?.name !== "AbortError") openShareFallback(); }
+  }else openShareFallback();
+});
+shareClose.addEventListener("click",closeShare);
+sharePanel.addEventListener("click",event=>{ if(event.target === sharePanel) closeShare(); });
+document.addEventListener("keydown",event=>{ if(event.key === "Escape" && !sharePanel.hidden) closeShare(); });
+document.querySelector("#copyShare").addEventListener("click",async()=>{
+  try{ await navigator.clipboard.writeText(shareUrl); shareStatus.textContent = "Lien copié."; }
+  catch{ shareStatus.textContent = shareUrl; }
+});
+setShareLinks();
 
 // Service worker
 if("serviceWorker" in navigator && location.protocol.startsWith("http")){
