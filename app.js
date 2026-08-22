@@ -223,7 +223,6 @@ const shareBtn = document.querySelector("#shareBtn");
 const sharePanel = document.querySelector("#sharePanel");
 const shareClose = document.querySelector("#shareClose");
 const shareNative = document.querySelector("#shareNative");
-const shareFacebook = document.querySelector("#shareFacebook");
 const shareStatus = document.querySelector("#shareStatus");
 const shareUrl = "https://nyxalabs.github.io/";
 const shareText = `Vos données sont dans la nature. Les arnaques qui arrivent vont être sur-mesure. ⚠️
@@ -255,7 +254,6 @@ function setShareLinks(){
   const encodedText = encodeURIComponent(shareText);
   document.querySelector("#shareSms").href = `sms:?&body=${encodedText}`;
   document.querySelector("#shareWhatsapp").href = `https://wa.me/?text=${encodedText}`;
-  document.querySelector("#shareFacebook").href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
   document.querySelector("#shareX").href = `https://twitter.com/intent/tweet?text=${encodedText}`;
   document.querySelector("#shareTelegram").href = `https://t.me/share/url?url=&text=${encodedText}`;
   document.querySelector("#shareLinkedin").href = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
@@ -286,11 +284,6 @@ async function tryNativeShare(){
 }
 shareNative.addEventListener("click",async()=>{
   if(!(await tryNativeShare())) shareStatus.textContent = "Le partage du téléphone n’est pas disponible.";
-});
-shareFacebook.addEventListener("click",async event=>{
-  if(!isPhoneLayout() || typeof navigator.share !== "function") return;
-  event.preventDefault();
-  if(!(await tryNativeShare())) window.location.assign(event.currentTarget.href);
 });
 shareClose.addEventListener("click",closeShare);
 sharePanel.addEventListener("click",event=>{ if(event.target === sharePanel) closeShare(); });
