@@ -51,7 +51,8 @@
         <p>Des outils simples, gratuits et faciles à utiliser. Pas besoin d’être expert : vous choisissez ce dont vous avez besoin, NYXA vous guide.</p>
         <div class="hero-actions">
           <a class="primary-btn" href="#outils">Voir les outils <span>↓</span></a>
-          <button class="secondary-btn" id="installBtn" hidden>Installer NYXA</button>
+          <button class="secondary-btn" id="installBtn" hidden>Installer NYXA sur cet appareil</button>
+          <button class="secondary-btn" id="shareBtn" type="button" title="Partager le portail NYXA">Partager NYXA</button>
         </div>
         <div class="hero-stats">
           <div><strong id="liveCount">1</strong><span>outil(s) en ligne</span></div>
@@ -170,6 +171,23 @@
       </div>
     </section>
   </main>
+
+  <div class="share-panel" id="sharePanel" hidden>
+    <div class="share-card" role="dialog" aria-modal="true" aria-labelledby="shareTitle">
+      <button class="share-close" id="shareClose" type="button" aria-label="Fermer le partage">×</button>
+      <div class="section-kicker">Faire connaître NYXA</div>
+      <h2 id="shareTitle">Partager le portail NYXA</h2>
+      <p>Choisissez le moyen qui vous convient. Sur téléphone, le bouton de partage du système peut aussi proposer vos applications habituelles.</p>
+      <div class="share-options">
+        <a class="share-option" id="shareSms" href="#">Message (SMS)</a>
+        <a class="share-option" id="shareWhatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="share-option" id="shareFacebook" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="share-option" id="shareX" href="#" target="_blank" rel="noopener">X</a>
+        <button class="share-option" id="copyShare" type="button">Copier le lien</button>
+      </div>
+      <p class="share-status" id="shareStatus" role="status" aria-live="polite"></p>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-brand">
